@@ -49,7 +49,7 @@ export default function BenefitItem({
       <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
       <p className="text-2xl font-bold text-green-600 mb-2">{amount}</p>
       <p className="text-gray-600">{description}</p>
-      <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">
+      <button className="mt-4 bg-gray-200 text-gray-900 border-gray-700  px-4 py-2 rounded hover:bg-gray-300 transition-colors">
         This is important to me
       </button>
     </div>
