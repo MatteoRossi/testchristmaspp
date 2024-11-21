@@ -102,7 +102,7 @@ function App() {
           What Liberal progress matters most for your family?
         </h1>
         <p className="text-center text-lg text-gray-600 mb-8">
-         As we approach the holiday season, select the progress that makes a difference for you family, and see how our plan compares to Pierre Poilievre's Conservatives.
+         As we approach the holiday season, select the progress that makes a difference for your family, and see how our plan compares to Pierre Poilievre's Conservatives.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
