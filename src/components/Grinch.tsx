@@ -1,5 +1,5 @@
-import React from 'react';
-import StolenBenefit from './StolenBenefit';
+import React from "react";
+import StolenBenefit from "./StolenBenefit";
 
 interface GrinchProps {
   isVisible: boolean;
@@ -13,12 +13,12 @@ interface GrinchProps {
   };
 }
 
-export default function Grinch({ 
-  isVisible, 
-  position, 
-  hasBenefit, 
+export default function Grinch({
+  isVisible,
+  position,
+  hasBenefit,
   isWalkingAway,
-  stolenBenefit 
+  stolenBenefit,
 }: GrinchProps) {
   if (!isVisible) return null;
 
@@ -28,19 +28,24 @@ export default function Grinch({
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
-        transition: 'all 1s ease-in-out',
+        transition: "all 1s ease-in-out",
+        transform: `translateX(${isWalkingAway ? "100px" : "0px"})`, // Add this line
       }}
     >
-      <div className={`relative ${isWalkingAway ? 'scale-x-[-1]' : ''}`}>
+      <div className={`relative ${isWalkingAway ? "scale-x-[-1]" : ""}`}>
         {hasBenefit && stolenBenefit && (
-          <div className={`absolute -top-20 left-1/2 -translate-x-1/2 ${isWalkingAway ? 'scale-x-[-1]' : ''}`}>
+          <div
+            className={`absolute -top-20 left-1/2 -translate-x-1/2 ${
+              isWalkingAway ? "scale-x-[-1]" : ""
+            }`}
+          >
             <StolenBenefit {...stolenBenefit} />
           </div>
         )}
         <div className="animate-walk">
-          <img 
-            src="https://matteorossi.github.io/calc/pptest.webp" 
-            alt="Grinch" 
+          <img
+            src="https://matteorossi.github.io/calc/pptest.png"
+            alt="Grinch"
             className="w-24 h-24"
           />
         </div>

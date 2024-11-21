@@ -1,5 +1,5 @@
-import React from 'react';
-import { DollarSign } from 'lucide-react';
+import React from "react";
+import { DollarSign } from "lucide-react";
 
 interface BenefitItemProps {
   title: string;
@@ -11,14 +11,14 @@ interface BenefitItemProps {
   isStolen: boolean;
 }
 
-export default function BenefitItem({ 
-  title, 
-  amount, 
-  description, 
+export default function BenefitItem({
+  title,
+  amount,
+  description,
   onAttemptClaim,
   isBeingStolen,
   showWarning,
-  isStolen
+  isStolen,
 }: BenefitItemProps) {
   if (isStolen) {
     return (
@@ -33,7 +33,7 @@ export default function BenefitItem({
   return (
     <div
       className={`relative bg-white p-6 rounded-lg shadow-md transition-all duration-500 cursor-pointer
-        hover:shadow-xl ${isBeingStolen ? 'opacity-50 scale-90' : ''}`}
+        hover:shadow-xl ${isBeingStolen ? "opacity-50 scale-90" : ""}`}
       onClick={(e) => onAttemptClaim(e.currentTarget)}
     >
       {showWarning && (
@@ -49,7 +49,7 @@ export default function BenefitItem({
       <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
       <p className="text-2xl font-bold text-green-600 mb-2">{amount}</p>
       <p className="text-gray-600">{description}</p>
-      <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+      <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">
         This is important to me
       </button>
     </div>
